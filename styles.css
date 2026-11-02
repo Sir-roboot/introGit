@@ -1,11 +1,116 @@
-body {
-    margin: 0;
-    padding: 40px;
-    background-color: #f2f4f8;
-    font-family: Arial, sans-serif;
-    text-align: center;
+:root {
+    --ink: #252923;
+    --muted: #666c60;
+    --paper: #f8f8f1;
+    --accent: #bce675;
 }
 
-h1 {
-    color: #2c3e50;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Arial, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 3px solid #547d28; outline-offset: 5px; }
+.header, .hero, .about, .explore, footer {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.header {
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e4e7dc;
+}
+.logo { font-size: 24px; font-weight: 800; letter-spacing: -1.5px; }
+.logo span, .explore h2 span { color: #82ae40; }
+nav { display: flex; gap: 36px; font-size: 14px; font-weight: 700; }
+nav a:hover, .text-link:hover { color: #678d32; }
+.hero {
+    min-height: 580px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding-top: 70px;
+    padding-bottom: 90px;
+}
+.eyebrow, .section-label { font-size: 11px; font-weight: 800; letter-spacing: 2px; }
+.eyebrow { display: flex; align-items: center; gap: 10px; }
+.eyebrow span { width: 9px; height: 9px; background: #91c74b; border-radius: 50%; }
+h1, h2, p { margin-top: 0; }
+h1 { max-width: 620px; margin: 28px 0; font-size: clamp(52px, 6.5vw, 92px); line-height: 1.02; letter-spacing: -5px; }
+h1 em { color: #789e42; font-family: Georgia, serif; font-weight: normal; }
+.intro { max-width: 430px; color: var(--muted); font-size: 18px; line-height: 1.7; }
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 45px;
+    margin-top: 24px;
+    padding: 18px 23px;
+    background: var(--ink);
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.button:hover { background: #4d6934; }
+.button span { font-size: 19px; }
+.hero-art { position: relative; min-height: 390px; display: grid; place-items: center; }
+.art-circle {
+    width: min(100%, 390px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    background: var(--accent);
+    border-radius: 50%;
+}
+.art-circle span { font: italic 260px/1 Georgia, serif; color: #37502c; transform: translateY(-10px); }
+.art-note {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    padding: 18px 22px;
+    background: #fff;
+    box-shadow: 0 12px 35px #26351c12;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+.art-note span { margin-left: 25px; color: #81ae43; font-size: 28px; }
+.about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    padding-top: 95px;
+    padding-bottom: 110px;
+    border-top: 1px solid #e4e7dc;
+}
+.section-label { color: #77856b; }
+.about h2, .explore h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.13; letter-spacing: -2px; }
+.about p:last-child { max-width: 570px; color: var(--muted); font-size: 17px; line-height: 1.8; }
+.explore { padding-top: 85px; padding-bottom: 95px; background: #e8f1da; }
+.explore h2 { margin: 35px 0; }
+.text-link { font-size: 14px; font-weight: 700; border-bottom: 1px solid; padding-bottom: 7px; }
+.text-link span { margin-left: 25px; }
+footer { display: flex; justify-content: space-between; align-items: center; padding-top: 35px; padding-bottom: 35px; }
+footer p { margin: 0; color: var(--muted); font-size: 13px; }
+@media (max-width: 700px) {
+    .header { height: 76px; }
+    nav { gap: 20px; font-size: 13px; }
+    .hero { grid-template-columns: 1fr; gap: 25px; padding-top: 65px; padding-bottom: 70px; }
+    h1 { letter-spacing: -3px; }
+    .hero-art { min-height: 300px; }
+    .art-circle { width: min(80%, 320px); }
+    .art-circle span { font-size: 200px; }
+    .about { grid-template-columns: 1fr; gap: 15px; padding-top: 70px; padding-bottom: 70px; }
+    .explore { padding-top: 70px; padding-bottom: 75px; }
+    footer { gap: 20px; flex-wrap: wrap; }
 }

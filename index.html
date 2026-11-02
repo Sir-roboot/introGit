@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>introGit</title>
+    <meta name="description" content="Bienvenido al espacio personal de Santiago.">
+    <title>Santiago | Mi espacio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>HOLA ME LLAMO SANTIAGO</h1>
-    <p>este es un cambio nuevo</p>
+    <header class="header">
+        <a class="logo" href="#inicio">santiago<span>.</span></a>
+        <nav aria-label="Navegación principal">
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#explorar">Explorar</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="eyebrow"><span></span> HOLA, BIENVENIDO</p>
+                <h1>Me llamo <em>Santiago.</em></h1>
+                <p class="intro">Este es mi espacio en la web: un lugar para compartir ideas, aprender y crear cosas nuevas.</p>
+                <a class="button" href="#sobre-mi">Conoce más <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="art-circle"><span>S</span></div>
+                <div class="art-note">UN ESPACIO<br>PARA CREAR <span>✳</span></div>
+            </div>
+        </section>
+        <section class="about" id="sobre-mi">
+            <p class="section-label">01 / SOBRE ESTE ESPACIO</p>
+            <div>
+                <h2>Las grandes ideas comienzan con un primer paso.</h2>
+                <p>Esta página es el comienzo de algo nuevo. Un espacio que puede crecer con cada proyecto, cada aprendizaje y cada idea que venga después.</p>
+            </div>
+        </section>
+        <section class="explore" id="explorar">
+            <p class="section-label">02 / SIGAMOS CREANDO</p>
+            <h2>Siempre hay algo nuevo<br>por descubrir<span>.</span></h2>
+            <a class="text-link" href="#inicio">Volver al inicio <span aria-hidden="true">↑</span></a>
+        </section>
+    </main>
+    <footer>
+        <a class="logo" href="#inicio">santiago<span>.</span></a>
+        <p>Hecho para empezar algo nuevo.</p>
+    </footer>
 </body>
 </html>
